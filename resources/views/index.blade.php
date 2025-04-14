@@ -1,5 +1,5 @@
 @extends('_layout')
 
 @section('content')
-    <p>test</p>
+    <livewire:focus-tree />
 @endsection
