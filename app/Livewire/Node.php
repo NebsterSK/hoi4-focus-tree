@@ -15,4 +15,14 @@ class Node extends Component
     {
         $this->node = $node;
     }
+
+    public function toggle(): void
+    {
+        $this->selected = ! $this->selected;
+
+        $this->dispatch('nodeToggled',
+            selected: $this->selected,
+            duration: $this->node->focus->duration
+        );
+    }
 }

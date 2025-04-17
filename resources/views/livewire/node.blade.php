@@ -1,3 +1,6 @@
-<div wire:click="$toggle('selected')">
-    <p>{{ $this->node->focus->name . ' ' . ($this->selected ? '1' : '') }}</p>
+<div wire:click="toggle" @class([
+        'node',
+        'selected' => $this->selected,
+    ])>
+    <p class="mb-0">{{ $this->node->focus->name }}</p>
 </div>

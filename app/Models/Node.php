@@ -6,14 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
- * @calss Node
+ * 
  *
  * @property int $id
  * @property int $focus_id
  * @property int $country_id
  * @property int $position_x
  * @property int $position_y
- *
+ * @property-read \App\Models\Country $country
+ * @property-read \App\Models\Focus $focus
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Node newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Node newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Node query()
@@ -22,7 +23,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Node whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Node wherePositionX($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Node wherePositionY($value)
- *
  * @mixin \Eloquent
  */
 class Node extends Model
