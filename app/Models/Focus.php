@@ -27,6 +27,9 @@ class Focus extends Model
 {
     protected $table = 'focuses';
 
+    public const int DURATION_35 = 35;
+    public const int DURATION_70 = 70;
+
     public function nodes(): HasMany
     {
         return $this->hasMany(Node::class, 'focus_id', 'id');
